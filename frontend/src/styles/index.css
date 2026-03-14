@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-primary-500;
+  }
+  
+  .btn-danger {
+    @apply btn bg-danger-600 text-white hover:bg-danger-700 focus:ring-danger-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300 p-6;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply px-2.5 py-0.5 text-xs font-medium rounded-full inline-flex items-center;
+  }
+  
+  .badge-green {
+    @apply badge bg-success-100 text-success-700;
+  }
+  
+  .badge-yellow {
+    @apply badge bg-warning-100 text-warning-700;
+  }
+  
+  .badge-red {
+    @apply badge bg-danger-100 text-danger-700;
+  }
+  
+  .badge-blue {
+    @apply badge bg-primary-100 text-primary-700;
+  }
+
+  /* Input Styles */
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .input-error {
+    @apply input border-danger-500 focus:ring-danger-500;
+  }
+
+  /* Table Styles */
+  .table-container {
+    @apply w-full overflow-x-auto bg-white rounded-lg shadow;
+  }
+  
+  .table {
+    @apply w-full text-sm text-left;
+  }
+  
+  .table thead {
+    @apply text-xs uppercase bg-gray-50 text-gray-700;
+  }
+  
+  .table th {
+    @apply px-6 py-3 font-medium;
+  }
+  
+  .table td {
+    @apply px-6 py-4 border-b border-gray-200;
+  }
+
+  /* Layout */
+  .dashboard-layout {
+    @apply min-h-screen bg-gray-50;
+  }
+  
+  .main-content {
+    @apply flex-1 p-6 lg:p-8 transition-all duration-300;
+  }
+
+  /* Skeleton Loader */
+  .skeleton {
+    @apply animate-pulse bg-gray-200 rounded;
+  }
+  
+  .skeleton-text {
+    @apply skeleton h-4 w-full;
+  }
+  
+  .skeleton-circle {
+    @apply skeleton rounded-full;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+      linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
